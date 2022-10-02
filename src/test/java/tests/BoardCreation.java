@@ -1,10 +1,24 @@
 package tests;
 
 import model.Board;
+import model.User;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class BoardCreation extends TestBase{
+public class BoardCreation extends TestBase {
+
+    @BeforeMethod
+    public void preconditions() {
+        User user = new User().withEmail("juliakliot.jk@gmail.com").withPassword("misha240613");
+        app.getUser().initLogin();
+        app.getUser().pause(2000);
+        app.getUser().fillLoginForm(user);
+        app.getUser().submitLogin();
+        app.getUser().pause(2000);
+
+    }
+
     @Test
     public void boardCreation1() {
         Board board = new Board().withTitle("QA35");

@@ -19,6 +19,7 @@ public class ApplicationManager {
 
         user = new UserHelper(wd);
         board = new BoardHelper(wd);
+
     }
 
     public void quit(){
