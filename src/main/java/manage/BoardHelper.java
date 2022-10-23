@@ -19,6 +19,9 @@ public class BoardHelper extends HelperBase{
     public void fillInBoardCreationForm(Board board) {
         type(By.cssSelector("[data-test-id='create-board-title-input']"),board.getTitle());
     }
+    public void fillInBoardCreationForm(String title) {
+        type(By.cssSelector("[data-test-id='create-board-title-input']"),title);
+    }
 
     public void scrolldownTheForm() {
         Actions action= new Actions(wd);

@@ -1,0 +1,3 @@
+18:38:33.142  INFO  manage.ApplicationManager - Test starts---
+18:38:34.924  INFO  tests.TestBase - Start tests---testNewTab
+18:38:36.748  INFO  tests.TestBase - ****************************************************************************************
